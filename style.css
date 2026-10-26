@@ -1,0 +1,523 @@
+
+/* =========================================
+   1. WARNA DAN PENGATURAN DASAR
+========================================= */
+:root {
+    --blue: #315D80;
+    --blue-dark: #244762;
+    --blue-light: #EAF1F7;
+    --green: #789985;
+    --green-light: #EAF1EB;
+    --white: #FFFFFF;
+    --background: #F3F7FA;
+    --text: #293B4B;
+    --muted: #718096;
+    --border: #E0E8EF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: var(--background);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* =========================================
+   2. HEADER DAN LOGO
+========================================= */
+.header {
+    background: var(--blue);
+    color: var(--white);
+    padding: 20px 6%;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.logo {
+    display: block;
+    width: 82px;
+    height: 82px;
+    object-fit: contain;
+    flex-shrink: 0;
+    border-radius: 10px;
+}
+
+.brand-text {
+    min-width: 0;
+}
+
+.brand h1 {
+    font-size: 27px;
+    line-height: 1.3;
+    margin-bottom: 4px;
+}
+
+.brand p {
+    color: #E2ECF4;
+    font-size: 14px;
+}
+
+/* =========================================
+   3. NAVIGASI
+========================================= */
+.navbar {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding: 0 6%;
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+    overflow-x: auto;
+}
+
+.nav-link {
+    display: inline-block;
+    padding: 15px 3px;
+    color: var(--muted);
+    text-decoration: none;
+    font-size: 14px;
+    white-space: nowrap;
+    border-bottom: 3px solid transparent;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--blue);
+    border-bottom-color: var(--green);
+}
+
+/* =========================================
+   4. KONTEN UTAMA
+========================================= */
+.container {
+    width: 100%;
+    max-width: 1120px;
+    margin: 35px auto;
+    padding: 0 24px;
+}
+
+/* =========================================
+   5. BAGIAN SAMBUTAN
+========================================= */
+.welcome {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    width: 100%;
+    min-width: 0;
+    padding: 38px;
+    color: var(--white);
+    background: linear-gradient(120deg, var(--blue), #426F90);
+    border-radius: 18px;
+}
+
+.welcome-text {
+    flex: 1 1 0;
+    min-width: 0;
+}
+
+.label {
+    display: inline-block;
+    margin-bottom: 12px;
+    color: #DCE8F1;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+}
+
+.welcome h2 {
+    margin-bottom: 12px;
+    font-size: 34px;
+    line-height: 1.3;
+}
+
+.welcome p {
+    max-width: 520px;
+    color: #E7EFF6;
+    font-size: 15px;
+}
+
+.welcome-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 170px;
+    height: 170px;
+    padding: 8px;
+    flex-shrink: 0;
+    background: var(--white);
+    border: 3px solid #DCE8F1;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.welcome-logo {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 50%;
+}
+
+/* =========================================
+   6. JUDUL BAGIAN
+========================================= */
+.section-heading {
+    margin: 34px 0 18px;
+}
+
+.section-heading h2 {
+    color: var(--blue-dark);
+    font-size: 22px;
+}
+
+.section-heading p {
+    margin-top: 4px;
+    color: var(--muted);
+    font-size: 14px;
+}
+
+/* =========================================
+   7. KARTU FITUR BERANDA
+========================================= */
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: stretch;
+    gap: 20px;
+    width: 100%;
+}
+
+.feature-card {
+    width: 100%;
+    min-width: 0;
+    padding: 25px;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 15px;
+    overflow-wrap: break-word;
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 22px rgba(49, 93, 128, 0.08);
+}
+
+.feature-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    margin-bottom: 16px;
+    border-radius: 12px;
+    font-size: 25px;
+}
+
+.blue-icon {
+    color: var(--blue);
+    background: var(--blue-light);
+}
+
+.green-icon {
+    color: var(--green);
+    background: var(--green-light);
+}
+
+.feature-card h3 {
+    margin-bottom: 8px;
+    color: var(--blue-dark);
+    font-size: 18px;
+}
+
+.feature-card p {
+    margin-bottom: 18px;
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.feature-link {
+    display: inline-block;
+    color: var(--blue);
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.feature-link:hover {
+    color: var(--green);
+}
+
+/* =========================================
+   8. KARTU PETUNJUK
+========================================= */
+.tip-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-top: 22px;
+    padding: 22px;
+    background: var(--green-light);
+    border: 1px solid #D8E5DA;
+    border-radius: 14px;
+}
+
+.tip-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    flex-shrink: 0;
+    color: var(--white);
+    background: var(--green);
+    border-radius: 50%;
+    font-weight: bold;
+}
+
+.tip-card h3 {
+    margin-bottom: 4px;
+    color: #456750;
+    font-size: 16px;
+}
+
+.tip-card p {
+    color: #587061;
+    font-size: 14px;
+}
+
+/* =========================================
+   9. FORM PROFIL DAN SKILL
+========================================= */
+#profilForm,
+#skillForm {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+#profilForm label,
+#skillForm > label:not(.choice) {
+    color: var(--blue-dark);
+    font-weight: bold;
+}
+
+#profilForm input,
+#profilForm select,
+#skillForm select {
+    width: 100%;
+    min-width: 0;
+    padding: 12px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: var(--white);
+    color: var(--text);
+    font: inherit;
+}
+
+#skillForm h2 {
+    margin: 12px 0 4px;
+    color: var(--blue-dark);
+    font-size: 20px;
+}
+
+.choice {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    background: var(--blue-light);
+    border-radius: 8px;
+}
+
+.choice input {
+    flex-shrink: 0;
+}
+
+.submit-btn {
+    padding: 12px 18px;
+    margin-top: 12px;
+    border: none;
+    border-radius: 8px;
+    background: var(--blue);
+    color: var(--white);
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background: var(--blue-dark);
+}
+
+#profilMessage,
+#skillMessage {
+    color: var(--green);
+    font-weight: bold;
+    overflow-wrap: anywhere;
+}
+
+/* =========================================
+   10. FOOTER
+========================================= */
+footer {
+    padding: 30px 10px 10px;
+    color: var(--muted);
+    font-size: 12px;
+    text-align: center;
+}
+
+/* =========================================
+   11. TABLET
+========================================= */
+@media (max-width: 768px) {
+    .header {
+        padding: 20px 24px;
+    }
+
+    .navbar {
+        gap: 22px;
+        padding: 0 24px;
+    }
+
+    .container {
+        margin: 28px auto;
+        padding: 0 20px;
+    }
+
+    .welcome {
+        padding: 30px;
+        gap: 20px;
+    }
+
+    .welcome h2 {
+        font-size: 30px;
+    }
+
+    .welcome-icon {
+        width: 130px;
+        height: 130px;
+    }
+
+    .feature-grid {
+        gap: 16px;
+    }
+
+    .feature-card {
+        padding: 22px;
+    }
+}
+
+/* =========================================
+   12. HP
+========================================= */
+@media (max-width: 600px) {
+    .header {
+        padding: 18px 16px;
+    }
+
+    .brand {
+        gap: 12px;
+    }
+
+    .logo {
+        width: 58px;
+        height: 58px;
+    }
+
+    .brand h1 {
+        font-size: 21px;
+    }
+
+    .brand p {
+        font-size: 12px;
+    }
+
+    .navbar {
+        gap: 18px;
+        padding: 0 16px;
+    }
+
+    .nav-link {
+        padding: 14px 2px;
+        font-size: 13px;
+    }
+
+    .container {
+        margin: 22px auto;
+        padding: 0 16px;
+    }
+
+    .welcome {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 24px;
+        gap: 20px;
+    }
+
+    .welcome h2 {
+        font-size: 27px;
+    }
+
+    .welcome p {
+        font-size: 14px;
+    }
+
+    .welcome-icon {
+        width: 100px;
+        height: 100px;
+        padding: 4px;
+        border-width: 2px;
+        align-self: center;
+    }
+
+    .feature-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 14px;
+    }
+
+    .feature-card {
+        padding: 22px;
+    }
+
+    .tip-card {
+        padding: 18px;
+    }
+}
+
+/* =========================================
+   13. HP SANGAT KECIL
+========================================= */
+@media (max-width: 380px) {
+    .welcome {
+        padding: 20px;
+    }
+
+    .welcome-icon {
+        width: 80px;
+        height: 80px;
+    }
+
+    .welcome h2 {
+        font-size: 25px;
+    }
+
+    .brand h1 {
+        font-size: 19px;
+    }
+}

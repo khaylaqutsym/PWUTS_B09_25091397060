@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skill & Topik - SmartFinder</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="brand">
+            <img src="../assets/logo-smartfinder.png" alt="Logo SmartFinder" class="logo">
+            <div class="brand-text">
+                <h1>Skill & Topik</h1>
+                <p>Pilih kemampuan dan minat belajar.</p>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <a href="../index.html" class="feature-link">← Kembali ke Beranda</a>
+
+        <form id="skillForm" class="feature-card">
+            <h2>Skill yang Kamu Kuasai</h2>
+            <p>Pilih minimal satu kemampuan.</p>
+
+            <label class="choice"><input type="checkbox" name="skill" value="HTML"> HTML</label>
+            <label class="choice"><input type="checkbox" name="skill" value="CSS"> CSS</label>
+            <label class="choice"><input type="checkbox" name="skill" value="JavaScript"> JavaScript</label>
+            <label class="choice"><input type="checkbox" name="skill" value="Python"> Python</label>
+            <label class="choice"><input type="checkbox" name="skill" value="Database"> Database</label>
+
+            <h2>Topik yang Ingin Dipelajari</h2>
+            <label for="topik">Pilih topik</label>
+            <select id="topik" name="topik" required>
+                <option value="">Pilih topik belajar</option>
+                <option value="Pemrograman Web">Pemrograman Web</option>
+                <option value="Data Analysis">Data Analysis</option>
+                <option value="Basis Data">Basis Data</option>
+                <option value="UI/UX">UI/UX Design</option>
+            </select>
+
+            <button type="submit" class="submit-btn">Simpan Pilihan</button>
+            <p id="skillMessage" role="status"></p>
+        </form>
+    </main>
+
+    <script src="../script.js"></script>
+</body>
+</html>
