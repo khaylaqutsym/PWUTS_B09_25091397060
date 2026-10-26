@@ -1,5 +1,10 @@
 # SmartFinder
 
+**Nama:** Khayla Qutsy Mauliddina  
+**NIM:** 25091397060  
+**Kelas:** 2025B  
+**Mata Kuliah:** Pemrograman Web
+
 ## 1. Deskripsi Proyek
 
 SmartFinder merupakan rancangan sistem informasi pencarian partner belajar mahasiswa. Website ini dibuat untuk membantu mahasiswa menemukan teman belajar berdasarkan keterampilan (*skill*) dan topik pembelajaran yang diminati.
